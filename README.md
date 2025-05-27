@@ -80,3 +80,41 @@ However, I found that in 7 out of 31 cases where actualized revenue did not matc
 
 
 
+
+
+Question 2 
+
+
+
+
+
+**What is your team accountable and responsible for vs the teams you support?**
+
+My team is responsible for data integrity, reporting, exploratory data analysis and managing an experimentation road map(think implementing an MMM, incremental testing, analytics trade-offs, tooling etc.). 
+
+My team's outputs are other teams inputs. So for this position, other teams are defined as marketing teams for either 1st or 3rd party. My work should allow them to make better tactical marketing decisions. 
+
+
+
+**What are some things you consider important in your partnership with the teams you support?**
+
+I consider communication to be the most important. Everyone has ideas; I have thoughts about how things should be done, as does UA, product, etc. What I’ve found helpful is being able to understand each team’s goals, as in specifically what do they care about, and then communicating insights in a way that speaks to their goals. 
+
+
+Data teams are a supporting function, but I like to consider myself more of a thought partner. When I’m supporting a team, I don’t want to be the person they come to only after they’ve scoped a question—I want to be involved before that, helping shape how we even think about the problem or where we are going. While not everything is a data question I’ve found that partnering with product/ua/execs on a higher level has enhanced decision making. 
+
+
+
+
+**What are your rituals**
+
+The way I think about “rituals” is how I mentally structure my approach to work. My process typically follows three steps: understanding, reasoning, and examining bias.
+
+I start with a first principles mindset: Do I truly understand every component of this problem? If not, I break it down until I reach something foundational and then work my way back up.
+
+From there, I look for the simplest possible explanation first—Occam’s Razor is a powerful tool. While there are usually many ways to approach a problem, I’m often surprised by how frequently the simplest answer turns out to be right. Of course, if the simplest explanation isn’t correct, I move in order of complexity to find an answer. 
+
+Finally, once I’ve built a model or formed a conclusion, I ask: Where might I be wrong? Every line of reasoning carries assumptions, and often bias. I try to surface those: What are my assumptions? What if the opposite were true? What are the edge cases? What's the worst case scenario if I’m wrong? 
+
+Only after I go through this process, will I move forward. 
+
