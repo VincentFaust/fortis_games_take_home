@@ -103,7 +103,7 @@ I consider communication to be the most important. Everyone has ideas; I have th
 
 Data teams are a supporting function, but I like to consider myself more of a thought partner. When I’m supporting a team, I don’t want to be the person they come to only after they’ve scoped a question—I want to be involved before that, helping shape how we even think about the problem or where we are going. While not everything is a data question I’ve found that partnering with product/ua/execs on a higher level has enhanced decision making. 
 
-
+Giving a damn. When people care, they tend to hold a high bar for themselves and others, which I think ultimately translates into a successful product. I'm, individually not looking to "chill" or "coast" at my job and hope the people/teams I work with want to be the best.
 
 
 **What are your rituals**
