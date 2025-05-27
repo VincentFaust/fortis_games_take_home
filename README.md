@@ -4,6 +4,10 @@
 Codebase
 WIP
 
+Under `models`, I've created two directories: `leadership` and `ua_reports`. 
+
+My thought process here is that leadership focus on high level KPIs that help them understand the overall growth and health of the company, whereas UA focused on the tactical levers that drive performance and optimization. 
+
 
 
 Architecture Diagram 

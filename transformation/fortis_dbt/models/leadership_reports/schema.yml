@@ -1,0 +1,93 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "raw sessions from game client"
+    tables:
+      - name: start_session_events
+        description: "session start events from the game client"
+      - name: in_app_purchase_events
+        description: "purchase data from the client"
+      - name: mmp_singular_install_events
+        description: "mmp deterministic user level data (ha ha ha...)"
+      - name: summary_report_ad_networks
+        description: "mmp data"
+      - name: summary_report_revenue
+        description: "data from mmp and ad network, prefixed adn comes from adnetwork"
+
+models:
+  - name: dau
+    description: "model that gets the unique count of users by day"
+    columns:
+      - name: session_id
+        description: "primary key for this table"
+        data_tests:
+          - unique
+          - not_null
+      - name: event_date
+        description: "converted to PST"
+        data_tests:
+          - not_null
+      - name: dau
+        description: "number of unique users who had a at least one session on this date"
+
+  - name: new_users
+    description: "model finds new user growth by day"
+    columns:
+      - name: dau
+        description: number of unique users who had a at least one session on this date"
+      - name: event_timestamp_utc
+        description: "converted to PST"
+        data_tests:
+          - not_null
+      - name: net_new_users
+        description: dau - newusers = net gain user growth
+
+  - name: source_revenue
+    description: "model finds growth in revenue by ad networks by day"
+    columns:
+      - name: event_date
+        data_tests:
+          - not_null
+      - name: source
+        description: "ad network"
+      - name: network_revenue
+        description: "daily sum of revenue contribution by ad network"
+
+  - name: payer_rate
+    description: "model percentage of dau committing iaps"
+    columns:
+      - name: event_date
+        data_tests:
+          - not_null
+      - name: daily_payers
+        description: "unique count of payers"
+      - name: dau
+        description: "number of unique users who had a at least one session on this date"
+      - name: payer_rate
+        description: "daily_payers / dau"
+
+  - name: daily_marketing_p_and_l
+    description:
+      "model giving daily marketing p and l, which is comparing daily spend to daily cumulative
+      revenue. If you're buying profitably, at a certain point you should see daily revenue from marketing
+      exceed daily marketing costs "
+    columns:
+      - name: event_date
+        data_tests:
+          - not_null
+      - name: daily_payers
+        description: "unique count of payers"
+      - name: dau
+        description: "number of unique users who had a at least one session on this date"
+      - name: payer_rate
+        description: "daily_payers / dau"
+
+  - name: daily_arpu
+    description: "model finding daily arpu"
+    columns:
+      - name: event_date
+        data_tests:
+          - not_null
+      - name: arpu
+        description: "total_daily_revenue / dau"
